@@ -1,16 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+simple:
+  name: simple-task
   description: MyText
   archived: false
   date: 2017-02-17
 
-two:
-  name: MyString
-  description: MyText
-  state: 1
-  archived: false
-  type: 1
-  priority: 4
+everything:
+  name: task-with-fields-defined
+  description: A task with all fields defined
+  state_id: 1
+  archived: true
+  type_id: 1
+  priority_id: 4
   date: 2017-02-17

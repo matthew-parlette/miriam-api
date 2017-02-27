@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170217123632) do
+ActiveRecord::Schema.define(version: 20170220172447) do
+
+  create_table "links", force: :cascade do |t|
+    t.string   "name"
+    t.string   "url"
+    t.integer  "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_id"], name: "index_links_on_task_id"
+  end
 
   create_table "task_priorities", force: :cascade do |t|
     t.string   "name"

@@ -46,6 +46,12 @@ class TasksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def task_params
-      params.require(:task).permit(:name, :description, :state_id, :archived, :type_id, :priority_id, :date)
+      params.require(:task).permit(:name, :description, :state_id, :archived, :type_id, :priority_id, :date,
+        links_attributes: [ :name, :url, :task_id ])
+    end
+
+    # Render the task as json
+    def render_json
+
     end
 end

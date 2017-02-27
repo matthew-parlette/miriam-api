@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+google:
+  name: google
+  url: https://www.google.com
+  task: simple
+
+yahoo:
+  name: yahoo
+  url: https://www.yahoo.com
+  task: simple

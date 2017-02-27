@@ -21,9 +21,9 @@ class TaskTest < ActiveSupport::TestCase
     task.name = "Test task with defined attributes"
     task.description = "A description for the test task"
     task.date = Date.new(2017, 1, 1)
-    task.priority = TaskPriority.where(name: "high").first.id
-    task.state = TaskState.where(name: "icebox").first.id
-    task.type = TaskType.where(name: "question").first.id
+    task.priority = TaskPriority.where(name: "high").first
+    task.state = TaskState.where(name: "icebox").first
+    task.type = TaskType.where(name: "question").first
     task.archived = true
     assert task.save, "Could not save task with attributes defined"
     assert task.description.include?("A description"), "Description did not set"
